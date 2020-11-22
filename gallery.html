@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<head>
+
+    <!--Stylesheet link, Google Fonts, Headings, Titles, All of That-->
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet"> 
+
+    <title>WPHC | Gallery</title>
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">  
+
+    <h1>Water Pollution in Howard County | Gallery</h1>
+    <h2>Below is a series of images pertaining to water pollution.</h2>
+
+    <script src="https://kit.fontawesome.com/db449f6ea9.js" crossorigin="anonymous"></script>
+
+    <script src = "index.js" type = "text/javascript"/></script>
+
+</head>
+
+<body>
+
+    <!--Footer-->
+
+    <div class="footer">
+        <p>Aryan Sharma • Nirav Gill • HocoHacks 2020</p>
+    </div>
+
+    <!--Nav Bar-->
+
+    <ul>
+        <li><a href="file:///C:/Users/aryan/Desktop/HocoHacks/index.html" target="_blank" onmouseover="statsOver()" onmouseout="mouseout()"><font color="black"><i class="fas fa-home"></i></font></a></li>
+        <li><a href="file:///C:/Users/aryan/Desktop/HocoHacks/stats.html" target="_blank" onmouseover="statsOver()" onmouseout="mouseout()"><font color="black"><i class="far fa-chart-bar"></i></font></a></li>
+        <li><a href="file:///C:/Users/aryan/Desktop/HocoHacks/gallery.html" target="_blank" onmouseover="galleryOver()" onmouseout="mouseout()"><font color="#195EFF" ><i class="far fa-image"></font></i></a></li>
+        <li><a href="file:///C:/Users/aryan/Desktop/HocoHacks/info.html" target="_blank" onmouseover="infoOver()" onmouseout="mouseout()"><font color="black"><i class="fas fa-info-circle"></font></i></a></li>
+        <li><a href="file:///C:/Users/aryan/Desktop/HocoHacks/howyoucanhelp.html" target="_blank" onmouseover="helpOver()" onmouseout="mouseout()"><font color="black"><i class="far fa-question-circle"></i></font></a></li>
+    </ul>
+
+    <!--Logo-->
+
+    <div class="logo">
+        <img src="logo.png">
+    </div>
+
+    <!--Logo Text-->
+
+    <div class="logotext" id="logotext">
+        <p>LoremIpsum</p>
+    </div>
+
+    <div class="galleryimg1" id="galleryimg1"><img src="file:///C:/Users/aryan/Desktop/HocoHacks/gallery1.jpg" style="width:26.25vw;height:15vw;"></div>
+
+    <div class="galleryimg2" id="galleryimg2"><img src="file:///C:/Users/aryan/Desktop/HocoHacks/gallery2.png" style="width:26.25vw;height:15vw;"></div>
+
+    <div class="galleryimg3" id="galleryimg3"><img src="file:///C:/Users/aryan/Desktop/HocoHacks/gallery3.png" style="width:26.25vw;height:15vw;"></div>
+
+    <div class="galleryimg4" id="galleryimg4"><img src="file:///C:/Users/aryan/Desktop/HocoHacks/gallery4.jpg" style="width:26.25vw;height:15vw;"></div>
+
+    <div class="galleryimg5" id="galleryimg5"><img src="file:///C:/Users/aryan/Desktop/HocoHacks/gallery5.jpg" style="width:26.25vw;height:15vw;"></div>
+
+    <div class="galleryimg6" id="galleryimg6"><img src="file:///C:/Users/aryan/Desktop/HocoHacks/gallery6.jpg" style="width:26.25vw;height:15vw;"></div>
+
+    <button class="rightarrow" onclick="startSlides()"><i class="fas fa-chevron-right"></i></button>
+
+    <div class="slides" id="slides">
+    <p></p>
+    </div>
+
+    <script>
+
+    let x = 0;
+
+    preload = new Array();
+
+    slides = ["", "", "", "", "", "", ""];
+
+    function startSlides() {
+        document.getElementById("slides").innerHTML = slides[x];
+        x++;
+
+        // ^ updates x var and accordingly updates the slide
+
+        if (x == slides.length) {
+            x = 1;
+        }
+
+        if (x == 1) {
+            document.getElementById("galleryimg1").style.opacity = "1";
+        } else if (x == 2) {
+            document.getElementById("galleryimg2").style.opacity = "1";
+        } else if (x == 3) {
+            document.getElementById("galleryimg3").style.opacity = "1";
+        } else if (x == 4) {
+            document.getElementById("galleryimg4").style.opacity = "1";
+        } else if (x == 5) {
+            document.getElementById("galleryimg5").style.opacity = "1";
+        } else if (x == 6) {
+            document.getElementById("galleryimg6").style.opacity = "1";
+        } 
+
+        // ^ manipulates opacity of images to show them one at a time
+
+    }
+
+    startSlides(); // starts the function
+    </script>
+
+</body>
+
+</html> 
